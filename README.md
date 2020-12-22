@@ -1,4 +1,6 @@
-# cra-template
+# Food AF
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/031371db-39de-4fee-ae65-9de0073f0aa2/deploy-status)](https://app.netlify.com/sites/food-af/deploys)
 
 ## Highlights
 

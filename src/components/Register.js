@@ -104,7 +104,7 @@ const Register = () => {
     if (formSubmitted) {
       if (isFormValid) {
         api()
-          .users.createNew({
+          .users.create({
             name: `${firstname.value} ${lastname.value}`,
             email: email.value,
             password: password.value,
@@ -193,9 +193,7 @@ const Register = () => {
           </Link>
         </div>
       </div>
-      <AlertMessage open={showError} severity="error">
-        Please crosscheck the values in the form
-      </AlertMessage>
+      {showError && <AlertMessage>Please crosscheck the values in the form</AlertMessage>}
     </div>
   )
 }

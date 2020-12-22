@@ -16,8 +16,8 @@ export default function ProtectedContainer({ children }) {
   }
   return (
     <div className="w-full h-full relative flex flex-col">
-      <div className="flex w-full border">
-        <div className="flex-grow p-4">
+      <div className="flex w-full p-4 border">
+        <div className="flex-grow">
           <button type="button" className="px-2 py-1" onClick={onHomeClick}>
             {process.env.REACT_APP_NAME}
           </button>

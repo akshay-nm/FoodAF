@@ -3,13 +3,15 @@ import jwtDecode from 'jwt-decode'
 import { createSlice } from '@reduxjs/toolkit'
 import { updateUserId } from './userSlice'
 
+const initialState = {
+  accessToken: null,
+  refreshToken: null,
+  isLoggedIn: false,
+}
+
 const sessionSlice = createSlice({
   name: 'session',
-  initialState: {
-    accessToken: null,
-    refreshToken: null,
-    isLoggedIn: false,
-  },
+  initialState,
   reducers: {
     updateAccessToken: (state, action) => {
       state.accessToken = action.payload
@@ -33,7 +35,7 @@ export const login = ({ accessToken, refreshToken }, callback = () => {}) => (di
   callback()
 }
 
-export const logout = (callback) => (dispatch) => {
+export const logout = (callback = () => {}) => (dispatch) => {
   dispatch(updateRefreshToken(null))
   dispatch(updateAccessToken(null))
   dispatch(updateUserId(null))

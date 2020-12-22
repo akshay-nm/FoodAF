@@ -9,14 +9,16 @@ const initialState = {
 const miscSlice = createSlice({
   name: 'misc',
   initialState,
-  updateServerUnreachable: (state, action) => {
-    state.serverUnreachable = action.payload
-  },
-  updateInternalServerError: (state, action) => {
-    state.internalServerError = action.payload
-  },
-  updateForbidden: (state, action) => {
-    state.forbidden = action.payload
+  reducers: {
+    updateServerUnreachable: (state, action) => {
+      state.serverUnreachable = action.payload
+    },
+    updateInternalServerError: (state, action) => {
+      state.internalServerError = action.payload
+    },
+    updateForbidden: (state, action) => {
+      state.forbidden = action.payload
+    },
   },
 })
 

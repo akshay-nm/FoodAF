@@ -70,7 +70,7 @@ const Login = () => {
     if (formSubmitted) {
       if (isFormValid) {
         api()
-          .session.createNew(email.value, password.value)
+          .session.create({ email: email.value, password: password.value })
           .send()
           .then(handleResponse)
           .then((res) => dispatch(login(res)))
@@ -94,10 +94,10 @@ const Login = () => {
 
   return (
     <div>
-      <div>
-        <div className="h1">Sign in</div>
+      <div className="p-4">
+        <div className="text-xl uppercase mb-2">Sign in</div>
         <div>
-          <div>
+          <div className="mb-2">
             <div>Email</div>
             <input
               type="text"
@@ -106,7 +106,7 @@ const Login = () => {
               onChange={(event) => onEmailChange(event.target.value)}
             />
           </div>
-          <div>
+          <div className="mb-2">
             <div>Password</div>
             <input
               type="password"
@@ -115,26 +115,26 @@ const Login = () => {
               onChange={(event) => onPasswordChange(event.target.value)}
             />
           </div>
-          <button
-            type="button"
-            className="px-2 py-1 border rounded"
-            onClick={() => setFormSubmitted(true)}
-          >
-            Sign In
-          </button>
+          <div className="mb-2">
+            <button
+              type="button"
+              className="px-2 py-1 border rounded"
+              onClick={() => setFormSubmitted(true)}
+            >
+              Sign In
+            </button>
+          </div>
           <div>
-            <div>
+            <div className="mb-2">
               <Link to="/forgot-password">Forgot password?</Link>
             </div>
-            <div>
+            <div className="mb-2">
               <Link to="/register">Don&apos;t have an account? Sign Up!</Link>
             </div>
           </div>
         </div>
       </div>
-      <AlertMessage open={showError} severity="error">
-        Either email or password is incorrect
-      </AlertMessage>
+      {showError && <AlertMessage>Either email or password is incorrect</AlertMessage>}
     </div>
   )
 }

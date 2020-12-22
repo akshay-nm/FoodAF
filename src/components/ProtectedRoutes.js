@@ -4,13 +4,12 @@ import Settings from './Settings'
 import Home from './Home'
 import PageNotFound from './PageNotFound'
 import SessionAutoRefresh from './SessionAutoRefresh'
+import Dashboard from './Dashboard'
 
 const ProtectedRoutes = () => (
   <>
     <Switch>
-      <Route exact path="/">
-        <div>/</div>
-      </Route>
+      <Route exact path="/" component={Dashboard} />
       <Route path="/settings" component={Settings} />
       <Route path="/home" component={Home} />
       <Route path="/login">

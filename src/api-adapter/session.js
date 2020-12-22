@@ -44,21 +44,21 @@ const search = (payload) =>
 
 const refresh = (user, refreshToken) =>
   configuredFetch({
-    url: getUrlFromPath(`${resourceType}/refresh`),
+    url: getUrlFromPath(`/${resourceType}/refresh`),
     method: 'POST',
     body: JSON.stringify({ user, refreshToken }),
   })
 
 const revokeById = (user, refreshTokenId) =>
   configuredFetch({
-    url: getUrlFromPath(`${resourceType}/revoke`),
+    url: getUrlFromPath(`/${resourceType}/revoke`),
     method: 'POST',
     body: JSON.stringify({ user, refreshTokenId }),
   })
 
 const revoke = (user, refreshToken) =>
   configuredFetch({
-    url: getUrlFromPath(`${resourceType}/revoke`),
+    url: getUrlFromPath(`/${resourceType}/revoke`),
     method: 'POST',
     body: JSON.stringify({ user, refreshToken }),
   })

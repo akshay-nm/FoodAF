@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Home = () => (
-  <div>
+  <div className="p-4">
     Home component.
     <br />
     Add content about&nbsp;
