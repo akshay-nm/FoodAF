@@ -1,6 +1,11 @@
 @import 'tailwindcss/base';
+/* import custom base style files here */
+
 @import 'tailwindcss/components';
+/* import custom component style files here */
+
 @import 'tailwindcss/utilities';
+/* import custom utility files here */
 
 html,
 body,
