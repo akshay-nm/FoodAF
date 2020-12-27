@@ -62,7 +62,8 @@ const Todays = () => {
   }, [getData])
 
   return (
-    <div className="border p-4 mb-4">
+    // eslint-disable-next-line max-len
+    <div className="relative border rounded p-4 mb-4 bg-white transition duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-white ...">
       <div className="text-xl uppercase mb-2">Today&apos;s</div>
       {loading && <div>Loading</div>}
       {!loading && data && (
