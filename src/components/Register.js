@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
@@ -139,7 +140,7 @@ const Register = () => {
             <div>First name</div>
             <input
               type="text"
-              className="px-2 py-1 border"
+              className="px-2 py-1 bg-gray-700 rounded border"
               onChange={(event) => onFirstnameChange(event.target.value)}
               value={firstname.value}
             />
@@ -148,7 +149,7 @@ const Register = () => {
             <div>Last name</div>
             <input
               type="text"
-              className="px-2 py-1 border"
+              className="px-2 py-1 bg-gray-700 rounded border"
               onChange={(event) => onLastnameChange(event.target.value)}
               value={lastname.value}
             />
@@ -159,7 +160,7 @@ const Register = () => {
             <div>Email</div>
             <input
               type="text"
-              className="px-2 py-1 border"
+              className="px-2 py-1 bg-gray-700 rounded border"
               onChange={(event) => onEmailChange(event.target.value)}
               value={email.value}
             />
@@ -170,7 +171,7 @@ const Register = () => {
             <div>Password</div>
             <input
               type="password"
-              className="px-2 py-1 border"
+              className="px-2 py-1 bg-gray-700 rounded border"
               onChange={(event) => onPasswordChange(event.target.value)}
               value={password.value}
             />
@@ -178,11 +179,7 @@ const Register = () => {
         </div>
       </div>
       <div className="mb-2">
-        <button
-          type="button"
-          className="px-2 py-1 border rounded"
-          onClick={() => setFormSubmitted(true)}
-        >
+        <button type="button" className="buttonx" onClick={() => setFormSubmitted(true)}>
           Sign Up
         </button>
       </div>

@@ -31,7 +31,7 @@ const DayAfters = () => {
   }, [getData])
 
   return (
-    <div className="border p-4 mb-4">
+    <div className="border rounded p-4 mb-4 bg-white">
       <div className="text-xl uppercase mb-2">Day After&apos;s</div>
       <div>
         <div>

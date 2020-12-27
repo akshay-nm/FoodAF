@@ -15,15 +15,15 @@ export default function ProtectedContainer({ children }) {
     else history.replace('/')
   }
   return (
-    <div className="w-full h-full relative flex flex-col">
-      <div className="flex w-full p-4 border">
+    <div className="w-full bg-gray-800 h-full relative flex flex-col">
+      <div className="flex w-full p-4">
         <div className="flex-grow">
-          <button type="button" className="px-2 py-1" onClick={onHomeClick}>
+          <button type="button" className="px-2 text-white py-1" onClick={onHomeClick}>
             {process.env.REACT_APP_NAME}
           </button>
         </div>
         <div className="flex items-center">
-          <button type="button" className="px-2 py-1 border rounded" onClick={onLogoutClick}>
+          <button type="button" className="buttonx" onClick={onLogoutClick}>
             Logout
           </button>
         </div>

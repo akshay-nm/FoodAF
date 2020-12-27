@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { handleError, handleResponse, logger } from '../utils'
@@ -61,22 +62,18 @@ const AddDish = () => {
   }, [formWasSubmitted, formIsValid, submit])
 
   return (
-    <div className="p-4 border mb-4">
-      <div className="text-xl uppercase mb-2">Add a Dish</div>
+    <div className="p-4 rounded border border-red-600 text-white bg-gray-700 mb-4">
+      <div className="text-xl text-red-600 uppercase mb-2">Add a Dish</div>
       <div className="mb-2">
         <div>Name</div>
         <input
-          className="px-2 py-1 border"
+          className="px-2 py-1 bg-gray-800 border"
           value={name.value}
           onChange={(event) => onNameChange(event.target.value)}
         />
       </div>
       <div>
-        <button
-          type="button"
-          className="px-2 py-1 border rounded"
-          onClick={() => setFormWasSubmitted(true)}
-        >
+        <button type="button" className="buttonx" onClick={() => setFormWasSubmitted(true)}>
           Submit
         </button>
       </div>

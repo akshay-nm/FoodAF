@@ -1,5 +1,5 @@
 .buttonx {
-  @apply px-2 py-1 bg-black rounded;
+  @apply px-2 py-1 bg-black text-white rounded;
 }
 .buttonx:hover {
   @apply transition duration-100 transform scale-105 shadow-lg;

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useHistory, useLocation } from 'react-router-dom'
@@ -19,18 +20,18 @@ export default function Container({ children }) {
     else history.replace('/')
   }
   return (
-    <div className="w-full h-full relative flex flex-col">
-      <div className="flex w-full p-4 border">
+    <div className="w-full h-full relative bg-gray-900 text-white flex flex-col">
+      <div className="relative flex w-full p-4 bg-gray-800">
         <div className="flex-grow">
           <button type="button" className="px-2 py-1" onClick={onHomeClick}>
             {process.env.REACT_APP_NAME}
           </button>
         </div>
         <div className="flex items-center">
-          <button type="button" className="px-2 py-1 border rounded mr-2" onClick={onRegisterClick}>
+          <button type="button" className="buttonx mr-2" onClick={onRegisterClick}>
             Register
           </button>
-          <button type="button" className="px-2 py-1 border rounded" onClick={onLoginClick}>
+          <button type="button" className="buttonx" onClick={onLoginClick}>
             Login
           </button>
         </div>

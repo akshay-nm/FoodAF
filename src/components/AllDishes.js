@@ -28,7 +28,7 @@ const Dish = ({ id }) => {
 
   useEffect(() => fetchDish(), [fetchDish])
   return (
-    <div className="border px-2 py-1 mb-2">
+    <div className="border border-red-700 px-2 py-1 mb-2">
       {data && <div>{data.name}</div>}
       {!data && loading && <div>Loading </div>}
       {!data && !loading && <div>Failed to load dish data, try refreshing </div>}
@@ -62,7 +62,7 @@ const AllDishes = () => {
   useEffect(() => fetchAllDishIds(), [fetchAllDishIds])
 
   return (
-    <div className="p-2 border">
+    <div className="p-2 rounded border border-red-500 bg-gray-700 text-white">
       {ids.length > 0 && (
         <>
           {ids.map((id) => (

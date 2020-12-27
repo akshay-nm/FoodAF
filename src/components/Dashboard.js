@@ -7,11 +7,11 @@ import Yesterdays from './Yesterdays'
 import AllDishes from './AllDishes'
 
 const Dashboard = () => (
-  <div className="p-4">
+  <div className="p-4 bg-gray-900">
+    <Yesterdays />
     <Todays />
     <Tomorrows />
     <DayAfters />
-    <Yesterdays />
     <AddDish />
     <AllDishes />
   </div>

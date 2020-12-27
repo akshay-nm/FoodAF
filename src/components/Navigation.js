@@ -18,16 +18,16 @@ const Navigation = () => {
       <div className="flex-grow">{process.env.REACT_APP_NAME}</div>
       {session ? (
         <div>
-          <button type="button" className="px-2 py-1 border rounded" onClick={onLogoutClick}>
+          <button type="button" className="buttonx" onClick={onLogoutClick}>
             Logout
           </button>
         </div>
       ) : (
         <div>
-          <button type="button" className="px-2 py-1 border rounded mr-2" onClick={onLoginClick}>
+          <button type="button" className="buttonx mr-2" onClick={onLoginClick}>
             Login
           </button>
-          <button type="button" className="px-2 py-1 border rounded" onClick={onRegisterClick}>
+          <button type="button" className="buttonx" onClick={onRegisterClick}>
             Register
           </button>
         </div>

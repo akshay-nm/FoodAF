@@ -101,7 +101,7 @@ const Login = () => {
             <div>Email</div>
             <input
               type="text"
-              className="px-2 py-1 border"
+              className="px-2 py-1 rounded bg-gray-700 border"
               value={email.value}
               onChange={(event) => onEmailChange(event.target.value)}
             />
@@ -110,17 +110,13 @@ const Login = () => {
             <div>Password</div>
             <input
               type="password"
-              className="px-2 py-1 border"
+              className="px-2 py-1 rounded bg-gray-700 border"
               value={password.value}
               onChange={(event) => onPasswordChange(event.target.value)}
             />
           </div>
           <div className="mb-2">
-            <button
-              type="button"
-              className="px-2 py-1 border rounded"
-              onClick={() => setFormSubmitted(true)}
-            >
+            <button type="button" className="buttonx" onClick={() => setFormSubmitted(true)}>
               Sign In
             </button>
           </div>

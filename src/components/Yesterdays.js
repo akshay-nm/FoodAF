@@ -31,7 +31,7 @@ const Yesterdays = () => {
   }, [getData])
 
   return (
-    <div className="border p-4 mb-4">
+    <div className="relative border rounded p-4 mb-4 bg-gray-300">
       <div className="text-xl uppercase mb-2">Yesterday&apos;s</div>
       <div>
         <div>

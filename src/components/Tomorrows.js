@@ -31,7 +31,7 @@ const Tomorrows = () => {
   }, [getData])
 
   return (
-    <div className="border p-4 mb-4">
+    <div className="border relative rounded p-4 mb-4 bg-white">
       <div className="text-xl uppercase mb-2">Tomorrow&apos;s</div>
       <div>
         <div>
